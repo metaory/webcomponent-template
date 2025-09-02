@@ -114,6 +114,13 @@ done
 # Replace tokens
 echo "$files_to_modify" | xargs sed "${SED_INPLACE[@]}" "${sed_cmds[@]}"
 
+# Handle README swap - move LIB_README.md to README.md
+if [[ -f "LIB_README.md" ]]; then
+  log_info "Swapping README files..."
+  mv "LIB_README.md" "README.md"
+  log_success "README.md updated with component-specific content"
+fi
+
 # Rename files
 echo "$files_to_modify" | while read -r file; do
   dir=$(dirname "$file")
