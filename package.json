@@ -1,0 +1,40 @@
+{
+  "name": "__LIB_NAME__",
+  "version": "__VERSION__",
+  "description": "__DESCRIPTION__",
+  "type": "module",
+  "main": "__MAIN_FILE__.js",
+  "exports": {
+    ".": "./__MAIN_FILE__.js"
+  },
+  "files": [
+    "__MAIN_FILE__.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "test": "echo 'No tests specified'",
+    "dev": "bash -c 'for s in vanilla react vue angular docs; do npm run dev:$s & done; wait'",
+    "dev:vanilla": "cd examples/vite-vanilla && npm run dev",
+    "dev:react": "cd examples/vite-react && npm run dev",
+    "dev:vue": "cd examples/vite-vue && npm run dev",
+    "dev:angular": "cd examples/vite-angular && npm run dev",
+    "dev:docs": "cd docs && npm run dev"
+  },
+  "keywords": [
+    "web-component",
+    "vanilla-js",
+    "framework-agnostic"
+  ],
+  "author": "__AUTHOR__",
+  "license": "__LICENSE__",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/__AUTHOR__/__LIB_NAME__.git"
+  },
+  "bugs": {
+    "url": "https://github.com/__AUTHOR__/__LIB_NAME__/issues"
+  },
+  "homepage": "https://github.com/__AUTHOR__/__LIB_NAME__#readme"
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CDN - __LIB_NAME__</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f8fafc;
+      color: #1f2937;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #3b82f6;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #64748b;
+      margin-bottom: 2rem;
+    }
+
+    .demo-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      margin: 2rem 0;
+    }
+
+    .demo-item {
+      background: #3b82f6;
+      color: white;
+      padding: 1rem;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .code-block {
+      background: #f1f5f9;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 1rem 0;
+      border: 1px solid #e2e8f0;
+    }
+
+    .grid-demo {
+      margin: 2rem 0;
+    }
+
+    .controls {
+      margin: 1rem 0;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    label {
+      font-weight: 500;
+      color: #374151;
+    }
+
+    input,
+    select {
+      padding: 0.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img class="logo" src="/favicon.png" alt="__LIB_NAME__ Logo" />
+      <div class="title">__LIB_NAME__</div>
+      <div class="subtitle">Framework-agnostic CSS Grid web component</div>
+    </div>
+
+    <div class="demo-section">
+      <h2>Interactive Demo</h2>
+      <p>Customize the grid layout using the controls below:</p>
+
+      <div class="controls">
+        <div class="control-group">
+          <label for="cols">Columns:</label>
+          <select id="cols">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="auto-fit">auto-fit</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="gap">Gap:</label>
+          <select id="gap">
+            <option value="0.5rem">0.5rem</option>
+            <option value="1rem" selected>1rem</option>
+            <option value="1.5rem">1.5rem</option>
+            <option value="2rem">2rem</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="padding">Padding:</label>
+          <select id="padding">
+            <option value="0.5rem">0.5rem</option>
+            <option value="1rem" selected>1rem</option>
+            <option value="1.5rem">1.5rem</option>
+            <option value="2rem">2rem</option>
+          </select>
+        </div>
+
+        <button onclick="updateGrid()">Update Grid</button>
+      </div>
+
+      <div class="grid-demo">
+        <__TAG_NAME__ id="demo-grid" cols="3" gap="1rem" padding="1rem">
+          <div class="demo-item">Item 1</div>
+          <div class="demo-item">Item 2</div>
+          <div class="demo-item">Item 3</div>
+          <div class="demo-item">Item 4</div>
+          <div class="demo-item">Item 5</div>
+          <div class="demo-item">Item 6</div>
+          <div class="demo-item">Item 7</div>
+          <div class="demo-item">Item 8</div>
+          <div class="demo-item">Item 9</div>
+        </__TAG_NAME__>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>Usage</h2>
+      <p>Include the component via CDN:</p>
+      <div class="code-block">
+        <code>&lt;script type="module" src="https://unpkg.com/__LIB_NAME__"&gt;&lt;/script&gt;</code>
+      </div>
+
+      <p>Use in your HTML:</p>
+      <div class="code-block">
+        <code>
+            &lt;__LIB_NAME__ cols="3" gap="1rem" padding="1rem"&gt;<br>
+            &nbsp;&nbsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
+            &nbsp;&nbsp;&lt;div&gt;Item 2&lt;/div&gt;<br>
+            &nbsp;&nbsp;&lt;div&gt;Item 3&lt;/div&gt;<br>
+            &lt;/__LIB_NAME__&gt;
+          </code>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>Attributes</h2>
+      <ul>
+        <li><strong>cols</strong>: Number of columns or "auto-fit" for responsive grid</li>
+        <li><strong>gap</strong>: Spacing between grid items</li>
+        <li><strong>padding</strong>: Internal padding of the grid container</li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="module">
+    import 'https://unpkg.com/__LIB_NAME__';
+
+    console.log('__LIB_NAME__ component loaded');
+
+    function updateGrid() {
+      const grid = document.getElementById('demo-grid');
+      const cols = document.getElementById('cols').value;
+      const gap = document.getElementById('gap').value;
+      const padding = document.getElementById('padding').value;
+
+      grid.setAttribute('cols', cols);
+      grid.setAttribute('gap', gap);
+      grid.setAttribute('padding', padding);
+    }
+  </script>
+</body>
+
+</html>

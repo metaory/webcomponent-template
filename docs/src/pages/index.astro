@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import __COMPONENT_NAME__ from '../components/__COMPONENT_NAME__.astro';
+---
+
+<Layout title="Component Name">
+  <div class="container">
+    <div class="header">
+      <h1>__LIB_NAME__</h1>
+      <p>A framework-agnostic web component for flexible layouts</p>
+    </div>
+
+    <div class="demo">
+      <h2>Live Demo</h2>
+      <component-name>
+        <div class="demo-item">Item 1</div>
+        <div class="demo-item">Item 2</div>
+        <div class="demo-item">Item 3</div>
+        <div class="demo-item">Item 4</div>
+        <div class="demo-item">Item 5</div>
+        <div class="demo-item">Item 6</div>
+      </component-name>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Vanilla JS</h3>
+        <p>Basic usage with Vite</p>
+        <a href="/examples/vite-vanilla/" class="btn">View Example</a>
+      </div>
+      
+      <div class="card">
+        <h3>React</h3>
+        <p>React integration with refs</p>
+        <a href="/examples/vite-react/" class="btn">View Example</a>
+      </div>
+      
+      <div class="card">
+        <h3>Vue</h3>
+        <p>Vue 3 composition API</p>
+        <a href="/examples/vite-vue/" class="btn">View Example</a>
+      </div>
+      
+      <div class="card">
+        <h3>Angular</h3>
+        <p>Angular standalone components</p>
+        <a href="/examples/vite-angular/" class="btn">View Example</a>
+      </div>
+      
+      <div class="card">
+        <h3>CDN</h3>
+        <p>Direct browser usage</p>
+        <a href="/examples/cdn/" class="btn">View Example</a>
+      </div>
+      
+      <div class="card">
+        <h3>Documentation</h3>
+        <p>API reference and usage</p>
+        <a href="https://github.com/void/__LIB_NAME__" class="btn btn-secondary">GitHub</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .demo {
+    background: var(--muted);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    border: 1px solid var(--border);
+  }
+
+  .demo-item {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+  }
+</style>
