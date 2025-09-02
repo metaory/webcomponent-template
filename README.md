@@ -56,6 +56,7 @@ This template goes beyond basic scaffolding to provide **production-ready infras
 - **GitHub Pages deployment** ready to go
 - **NPM publishing** configuration complete
 - **Multi-dev-server setup** with port management
+- **Base URLs** configured for GitHub Pages subpath deployment
 
 ## Scaffolding
 
@@ -227,6 +228,20 @@ cd examples/vite-vue && npm run build
 cd examples/vite-angular && npm run build
 cd examples/vite-vanilla && npm run build
 ```
+
+## Deployment
+
+### GitHub Pages
+
+All examples are automatically deployed to GitHub Pages via GitHub Actions:
+
+- **Docs**: `https://username.github.io/repo-name/`
+- **Examples**: `https://username.github.io/repo-name/examples/framework-name/`
+- **Base URLs**: Automatically configured for GitHub Pages subpath deployment
+
+### NPM Publishing
+
+Ready-to-publish with proper exports and package.json configuration.
 
 ## License
 
